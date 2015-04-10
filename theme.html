@@ -9,12 +9,9 @@
       {% endif %}
       {{ site.name }}
     </title>
-
+    {{ header_meta }}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    {{ header_meta }}
-
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT Sans:400,700" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT Serif:400,700" />
@@ -44,7 +41,7 @@
     {% else %}
 
     <div class="wrapper row">
-      <div class="col-md-9 main">
+      <div class="col-sm-9 col-md-9 main">
         <div class="content">
           {% if is_home or is_tag %}
             {% if is_tag %}
@@ -174,7 +171,7 @@
           {% endif %}
         </div>
       </div>
-      <div class="col-md-3 side">
+      <div class="col-sm-3 col-md-3 side">
         <div class="widget widget-logo">
             <a href="/"><img src="{{ site.logo }}" alt="{{ site.name }}" /></a>
             <h1>{{ site.name }}</h1>
