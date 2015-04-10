@@ -7,4 +7,5 @@ a:hover{color:#1abc9c}
 .widget-logo{padding-top:3em}.widget-logo img{display:block;margin:0 auto 2em;width:80px}
 .blog-feed article{margin-bottom:3em}.blog-feed article h2{font-size:24px;font-weight:700}.blog-feed article h2 a{text-decoration:none}
 .blog-feed article .post-body{font-size:15px;color:#666}
-.blog-feed article .post-metadata{font-size:13px;color:#999;text-transform:lowercase}.blog-feed article .post-metadata a{color:#999;margin-right:.5em}
+.blog-feed article .post-metadata{font-size:13px;color:#999;text-transform:lowercase}.blog-feed article .post-metadata a{color:#999;margin-left:.5em}
+.blog-feed article .post-metadata .post-date{margin-left:0}

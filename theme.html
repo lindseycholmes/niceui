@@ -129,12 +129,11 @@
                   </div>
                 </div>
                 <div class="post-metadata">
-                  <a href="{{ post.url }}"><time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></a>
+                  <a href="{{ post.url }}" class="post-date"><time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></a>
                   <a href="{{ post.url }}{% if site.disqus %}{% endif %}" class='dsq-comment-count comment-link commentslink'></a>
                   {% if post.tags %}
                   <span class="post-tags">
-                    <i class="fa fa-tag" aria-hidden="true"></i>
-                    {{- post.tags|format_tags(humanize=True) -}}
+                    |{{- post.tags|format_tags(humanize=True) -}}
                   </span>
                   {% endif %}
                 </div>
