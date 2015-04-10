@@ -133,6 +133,7 @@
                   <a href="{{ post.url }}{% if site.disqus %}{% endif %}" class='dsq-comment-count comment-link commentslink'></a>
                   {% if post.tags %}
                   <span class="post-tags">
+                    <i class="fa fa-tag" aria-hidden="true"></i>
                     {{- post.tags|format_tags(humanize=True) -}}
                   </span>
                   {% endif %}
