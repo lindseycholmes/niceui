@@ -1,5 +1,9 @@
 *{margin:0;padding:0}
 body{font:14px/1.5 "PT Sans","Helvetica Neue",sans-serif}
+a:link{color:#222}
+a:hover{color:#1abc9c}
 .wrapper{margin:0 auto;width:970px}
-.widget .widget-logo{padding-top:3em}.widget .widget-logo img{margin:0 auto;width:80px}
-.blog-feed article{border-bottom:1px solid #eee}.blog-feed article h2{font-size:32px;color:#222;font-family:"PT sans",sans-serif}
+.widget-logo{padding-top:3em}.widget-logo img{margin:0 auto;width:80px}
+.blog-feed article{border-bottom:1px solid #eee}.blog-feed article h2{font-size:32px;font-weight:700}.blog-feed article h2 a{text-decoration:none}
+.blog-feed article .post-body{font-size:18px;color:#666}
+.blog-feed article .post-meta{font-size:13px;color:#999}.blog-feed article .post-meta a{color:#999}

@@ -1,19 +1,30 @@
 * { margin: 0; padding: 0; }
 
 body { font: 14px/1.5 "PT Sans","Helvetica Neue",sans-serif; }
+a:link { color: #222; }
+a:hover { color: #1ABC9C; }
 
 .wrapper { margin: 0 auto; width: 970px; }
 
-.widget {
+.widget { }
 	.widget-logo {
 		padding-top: 3em;
 		img { margin: 0 auto; width: 80px; }
 	}
-}
 
 .blog-feed {
 	article {
 		border-bottom: 1px solid #EEE;
-		h2 { font-size: 32px; color: #222; font-family: "PT sans",sans-serif; }
+		h2 {
+			font-size: 32px; font-weight: 700;
+			a { text-decoration: none; }
+		}
+		.post-body {
+			font-size: 18px; color: #666;
+		}
+		.post-meta {
+			font-size: 13px; color: #999;
+			a { color: #999; }
+		}
 	}
 }
