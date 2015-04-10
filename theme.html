@@ -44,59 +44,6 @@
     {% else %}
 
     <div class="wrapper row">
-      <div class="col-md-3 side">
-        <div class="widget widget-logo">
-            <img src="{{ site.logo }}" alt="{{ site.name }}" />
-            <p>{{ site.bio }}</p>
-        </div>
-        <div class="widget widget-social">
-          <ul class="social-links">
-            {% if site.twitter %}
-            <li>
-              <a href="{{ site.twitter }}" title="Twitter" target="_blank">
-                <i class="icon-twitter"></i>
-              </a>
-            </li>
-            {% endif %}
-            {% if site.facebook %}
-            <li>
-              <a href="{{ site.facebook }}" title="Facebook" target="_blank">
-                <i class="icon-facebook"></i>
-              </a>
-            </li>
-            {% endif %}
-            {% if site.googleplus %}
-            <li>
-              <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
-                <i class="icon-google-plus"></i>
-              </a>
-            </li>
-            {% endif %}
-            {% if site.linkedin %}
-            <li>
-              <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
-                <i class="icon-linkedin"></i>
-              </a>
-            </li>
-            {% endif %}
-            <li>
-              <a href="{{ site.atom_url }}" title="RSS" target="_blank">
-                <i class="icon-rss"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="widget widget-nav">
-            <ul class="nav-menu">
-              <li><a href="/">Home</a></li>
-              {% if pages %}
-              {% for page in pages %}
-              <li><a href="{{ page.url }}" class="{{ set_active(page.url) }}">{{ page.title }}</a></li>
-              {% endfor %}
-              {% endif %}
-            </ul>
-        </div>
-      </div>
       <div class="col-md-9 main">
         <div class="content">
           {% if is_home or is_tag %}
@@ -224,6 +171,59 @@
             </div>
 
           {% endif %}
+        </div>
+      </div>
+      <div class="col-md-3 side">
+        <div class="widget widget-logo">
+            <img src="{{ site.logo }}" alt="{{ site.name }}" />
+            <p>{{ site.bio }}</p>
+        </div>
+        <div class="widget widget-social">
+          <ul class="social-links">
+            {% if site.twitter %}
+            <li>
+              <a href="{{ site.twitter }}" title="Twitter" target="_blank">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.facebook %}
+            <li>
+              <a href="{{ site.facebook }}" title="Facebook" target="_blank">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.googleplus %}
+            <li>
+              <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
+                <i class="icon-google-plus"></i>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.linkedin %}
+            <li>
+              <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
+                <i class="icon-linkedin"></i>
+              </a>
+            </li>
+            {% endif %}
+            <li>
+              <a href="{{ site.atom_url }}" title="RSS" target="_blank">
+                <i class="icon-rss"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="widget widget-nav">
+            <ul class="nav-menu">
+              <li><a href="/">Home</a></li>
+              {% if pages %}
+              {% for page in pages %}
+              <li><a href="{{ page.url }}" class="{{ set_active(page.url) }}">{{ page.title }}</a></li>
+              {% endfor %}
+              {% endif %}
+            </ul>
         </div>
       </div>
     </div>
