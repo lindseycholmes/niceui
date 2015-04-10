@@ -1,5 +1,5 @@
 *{margin:0;padding:0}
-body{font:14px/1.5 sans-serif}
+body{font:14px/1.5 "PT Sans","Helvetica Neue",sans-serif}
 .wrapper{margin:0 auto;width:970px}
 .widget .widget-logo{padding-top:3em}.widget .widget-logo img{margin:0 auto;width:80px}
-.blog-feed article{border-bottom:1px solid #eee}.blog-feed article h2{font-size:32px;color:#222}
+.blog-feed article{border-bottom:1px solid #eee}.blog-feed article h2{font-size:32px;color:#222;font-family:"PT sans",sans-serif}
