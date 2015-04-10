@@ -154,39 +154,6 @@
             </div>
             {% endif %}
 
-          {% endif %}
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <div class="site-header">
-            <div class="header-top">
-              <h1 class="site-title">
-                <a href="/">{{ site.name }}</a>
-              </h1>
-            </div>
-            <nav class="site-nav">
-              <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                {% if pages %}
-                {% for page in pages %}
-                <li><a href="{{ page.url }}" class="{{ set_active(page.url) }}">{{ page.title }}</a></li>
-                {% endfor %}
-                {% endif %}
-              </ul>
-            </nav>
-          </div>
-          <div class="site-content">
-          {% if is_home or is_tag %}
-            {% if is_tag %}
-            <h2 class="tag-header">Showing all posts tagged {{ tag }}:</h2>
-            {% endif %}
-
-            
-
             {% if pagination.prev or pagination.next %}
             <div class="blog-pagination">
               {% if pagination.prev %}<a href="{{ pagination.prev }}" title="Newer Posts" class="pagination-newer">&larr; Newer Posts</a>{% endif %}
@@ -194,7 +161,7 @@
             </div>
             {% endif %}
 
-          {% elif post %}
+            {% elif post %}
 
             <article itemscope itemtype="http://schema.org/BlogPosting" class="blog-post post-single">
               <section class="post-body">
@@ -255,28 +222,6 @@
             </div>
 
           {% endif %}
-          </div>
-          <div class="site-footer">
-            <p>All rights Reserved &copy; <a href="/">{{ site.name }}</a>.</p>
-            <br />
-            <p>Theme inspired by <a href="http://www.fabthemes.com/binary/" target="_blank">Fabthemes</a> | Powered by <a href="http://postach.io/">Postach.io</a></p>
-          </div>
-        </div>
-        <div class="four columns">
-          <div class="sidebar">
-            <div class="widget widget-tagcloud">
-              <h2 class="widget-title">Tag Cloud</h2>
-              <div class="widget-content tag-cloud">
-                {% if site.tags %}
-                <ul>
-                  {% for tag in site.tags %}
-                  <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
