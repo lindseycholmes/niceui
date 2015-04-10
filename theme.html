@@ -17,8 +17,6 @@
 
     {{ header_meta }}
 
-    <link href="{{ assets('css/style.css') }}" rel="stylesheet" />
-
     {% if site.analytics %}
     <script>
     var _gaq = _gaq || [];
@@ -35,9 +33,7 @@
   <body>
 
     {% if is_login %}
-
       {{ login_form }}
-
     {% else %}
 
     <div class="wrapper row">
@@ -113,12 +109,6 @@
                   <h2 class="post-title">
                     <a href="{{ post.url }}">{{ post.title }}</a>
                   </h2>
-                  <div class="post-metadata">
-                      <p>
-                        <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time>
-                        <a href="{{ post.url }}{% if site.disqus %}{% endif %}" class='dsq-comment-count comment-link commentslink'></a>
-                      </p>
-                  </div>
                 </header>
                 <div class="post-body">
                   <div class="post-content">
@@ -129,10 +119,14 @@
                     <span class="post-link-url"><i class="icon-share"></i> <a href="{{ post.link_url }}" target="_blank">{{ post.link_url }}</a></span>
                     {% endif %}
                   </div>
+                </div>
+                <div class="post-metadata">
+                  <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time>
+                  <a href="{{ post.url }}{% if site.disqus %}{% endif %}" class='dsq-comment-count comment-link commentslink'></a>
                   {% if post.tags %}
-                  <div class="post-tags">
+                  <span class="post-tags">
                     {{- post.tags|format_tags(humanize=True) -}}
-                  </div>
+                  </span>
                   {% endif %}
                 </div>
               </article>
