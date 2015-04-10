@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>
-      {% if is_login %}Login
-      {% elif is_tag %}{{ tag }}
-      {% elif post %}{{ post.title }}
+      {% if is_login %}Login ｜
+      {% elif is_tag %}{{ tag }} ｜
+      {% elif post %}{{ post.title }} ｜
       {% endif %}
-      | {{ site.name }}
+      {{ site.name }}
     </title>
 
     <link rel="stylesheet" href="assets/css/style.css">
