@@ -41,7 +41,7 @@
     {% else %}
 
     <div class="wrapper row">
-      <div class="col-md-3">
+      <div class="col-md-3 side">
         <div class="widget widget-logo">
             <img src="{{ site.logo }}" alt="{{ site.name }}" />
             <p>{{ site.bio }}</p>
@@ -94,30 +94,8 @@
             </ul>
         </div>
       </div>
-      <div class="col-md-10">10</div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <div class="site-header">
-            <div class="header-top">
-              <h1 class="site-title">
-                <a href="/">{{ site.name }}</a>
-              </h1>
-            </div>
-            <nav class="site-nav">
-              <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                {% if pages %}
-                {% for page in pages %}
-                <li><a href="{{ page.url }}" class="{{ set_active(page.url) }}">{{ page.title }}</a></li>
-                {% endfor %}
-                {% endif %}
-              </ul>
-            </nav>
-          </div>
-          <div class="site-content">
+      <div class="col-md-9 main">
+        <div class="content">
           {% if is_home or is_tag %}
             {% if is_tag %}
             <h2 class="tag-header">Showing all posts tagged {{ tag }}:</h2>
@@ -175,6 +153,39 @@
               <h2 class="title"><em>No posts yet :(</em></h2>
             </div>
             {% endif %}
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="site-header">
+            <div class="header-top">
+              <h1 class="site-title">
+                <a href="/">{{ site.name }}</a>
+              </h1>
+            </div>
+            <nav class="site-nav">
+              <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                {% if pages %}
+                {% for page in pages %}
+                <li><a href="{{ page.url }}" class="{{ set_active(page.url) }}">{{ page.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+              </ul>
+            </nav>
+          </div>
+          <div class="site-content">
+          {% if is_home or is_tag %}
+            {% if is_tag %}
+            <h2 class="tag-header">Showing all posts tagged {{ tag }}:</h2>
+            {% endif %}
+
+            
 
             {% if pagination.prev or pagination.next %}
             <div class="blog-pagination">
@@ -253,52 +264,6 @@
         </div>
         <div class="four columns">
           <div class="sidebar">
-            <div class="widget widget-about">
-              <div class="widget-content">
-                <div class="avatar">
-                  <img src="{{ site.logo }}" alt="{{ site.author }}" />
-                </div>
-                <p>{{ site.bio }}</p>
-                <ul class="social-links">
-                  {% if site.twitter %}
-                  <li>
-                    <a href="{{ site.twitter }}" title="Twitter" target="_blank">
-                      <i class="icon-twitter"></i>
-                    </a>
-                  </li>
-                  {% endif %}
-                  {% if site.facebook %}
-                  <li>
-                    <a href="{{ site.facebook }}" title="Facebook" target="_blank">
-                      <i class="icon-facebook"></i>
-                    </a>
-                  </li>
-                  {% endif %}
-                  {% if site.googleplus %}
-                  <li>
-                    <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
-                      <i class="icon-google-plus"></i>
-                    </a>
-                  </li>
-                  {% endif %}
-                  {% if site.linkedin %}
-                  <li>
-                    <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
-                      <i class="icon-linkedin"></i>
-                    </a>
-                  </li>
-                  {% endif %}
-                  <li>
-                    <a href="{{ site.atom_url }}" title="RSS" target="_blank">
-                      <i class="icon-rss"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="widget widget-nav">
-                nav
-            </div>
             <div class="widget widget-tagcloud">
               <h2 class="widget-title">Tag Cloud</h2>
               <div class="widget-content tag-cloud">
