@@ -11,5 +11,7 @@ a:hover{color:#1abc9c}
 .blog-feed article{margin-bottom:2px;padding:15px;background:#fff}.blog-feed article .post-icon{position:absolute;margin-left:-70px;margin-top:-20px;display:block;width:60px;height:60px;border-radius:30px}
 .blog-feed article h2{margin:0 0 8px;font-size:16px;font-weight:700}.blog-feed article h2 a{text-decoration:none}
 .blog-feed article .post-body{font-size:13px;color:#666}.blog-feed article .post-body p{margin:0 0 5px}
-.blog-feed article .post-metadata{font-size:10px;color:#a7a7a7;text-transform:uppercase}.blog-feed article .post-metadata a{color:#a7a7a7;margin-left:.5em}
-.blog-feed article .post-metadata .post-date{margin-left:0}
+.post-metadata{font-size:10px;color:#a7a7a7;text-transform:uppercase}.post-metadata a{color:#a7a7a7;margin-left:.5em}
+.post-metadata .post-date{margin-left:0}
+.post-single{padding:15px;background:#fff}.post-single .post-title{font-size:24px}
+.post-single .post-content{padding:1em 0}

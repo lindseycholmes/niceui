@@ -117,8 +117,12 @@
                     <h1 class="post-title">{{ post.title }}</h1>
                   </div>
                   <div class="post-metadata">
-                    <p class="post-byline left">Published by {{ site.author }}</p>
-                    <p class="right"><time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time></p>
+                    <time datetime="{{ post.created_at }}" class="post-date">{{ post.created_at|date_format }}</time>
+                    {% if post.tags %}
+                    <span class="post-tags">
+                      {{- post.tags|format_tags(humanize=True) -}}
+                    </span>
+                    {% endif %}
                   </div>
                 </header>
                 <div class="post-content">
@@ -132,11 +136,7 @@
 
                 {{ theme.social.bar }}
 
-                {% if post.tags %}
-                <div class="post-tags">
-                  {{- post.tags|format_tags(humanize=True) -}}
-                </div>
-                {% endif %}
+                
               </section>
               {% if site.disqus %}
               <section class="comments">
