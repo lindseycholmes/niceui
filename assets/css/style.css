@@ -8,7 +8,7 @@ a:hover{color:#1abc9c}
 .widget-logo img{display:block;margin:0 auto 1em;width:80px}
 .widget-logo h1{font-size:24px;color:#222;font-weight:700;text-align:center}
 .widget-logo p{color:#999}
-.blog-feed article{margin-bottom:2px;padding:15px;background:#fff}.blog-feed article .post-icon{position:absolute;margin-left:-70px;margin-top:-20px;display:block;width:60px;height:60px;border-radius:30px}
+.blog-feed article{margin-bottom:1px;padding:15px;background:#fff}.blog-feed article .post-icon{position:absolute;margin-left:-70px;margin-top:-20px;display:block;width:60px;height:60px;border-radius:30px}
 .blog-feed article h2{margin:0 0 8px;font-size:16px;font-weight:700}.blog-feed article h2 a{text-decoration:none}
 .blog-feed article .post-body{font-size:13px;color:#666}.blog-feed article .post-body p{margin:0 0 5px}
 .post-metadata{font-size:10px;color:#a7a7a7;text-transform:uppercase}.post-metadata a{color:#a7a7a7;margin-left:.5em}
